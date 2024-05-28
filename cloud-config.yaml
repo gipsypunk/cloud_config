@@ -1,0 +1,23 @@
+#cloud-config
+users:
+  - name: root
+    lock-passwd: true
+    shell: /bin/bash   
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDJ9+cOv72BvDsNJnKl6HJKn2kA3snp2+wRA1MlLqxNcLqLz+lEFecUTAfFIcKUbZnjwehonZByU7X97BO/k0Cc8A1oGWSw7Brh4yQVt5ioNOCm0ZOE0NQzh3hCK+PKRkOTl+qGCG2lgnY6qx3cj5LgW+qBIhZVs0zjFm3HurGch/ckHWIGkhgMv8d+xE8ZtnUy6hmPjrSakp7eyaI/ZUIDp2/S9DJv9X+OUSxlaK+9/L8vVEtbE+UdvMMdTcyNsC+5bKNVfSi1fHjYsTUUMe2htInq65EFw13an19YjbJ6t6aiIonXveHwbz04DizQuOCd+Scxly+yiuz/HzYzb8kDZVROuLJL8B/GnsFcGYEtAY7luT7oUxyFY8zieiF7qHPbz2Lsl4JVPef6f5Bf8nNMw2Kd/KroUdPJKCHPApdRAt5vy8AZA+MalSbYGiVeppv5P/LqKLEgXsNgepusHgCbVf22CP85hZN9fNmShTDnI+Y2D0n3CTrlGh/SQn7ils6ZKKldJ3bnBy3F+aRLw1bgVDInVLVjLY9mWnBPZFkBiCThCdEeBlAoDN9AsFFA2WLvUPEck2C6hPgGMb/ilqnECiDHy4qmlcKn0MwamME2R08JWQsRzDpqgNCB3Klcjf6ec+9Z0BRfZJVxiTFIyUkBZvmP+1aihWo9ljNYv93WiQ== gipsypunk
+
+hostname: debian12
+timezone: Europe/Amsterdam
+package_update: True
+packages:
+  - nginx
+  - curl
+  - wget
+  - neovim
+  - vim 
+  - btop
+  - neofetch
+  - ncurses-term
+
+
